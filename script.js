@@ -6,9 +6,10 @@ var special = '!@#$%^&*';
 var numbers = '0123456789';
 var possChars = ''; // variable to hold all the possible characters according to the character types the user chose
 var requiredChars = ''; // variable to hold a random character from each character type to ensure that at least one character from each desired list is in the final password
-var fillMissing = ''; // variable to hold the remaining #of missing characters
+var fillMissing = ''; // variable to hold the remaining # of missing characters
+var finalPass = ''; // variable to hold the final password
 
-generatePassword();
+
 
 function generatePassword() {
   let passLength = parseInt(
@@ -22,7 +23,7 @@ function generatePassword() {
     alert("Your password will be " + passLength + " characters long.");
   }
 
-  //user
+  //user options
   var includeLowercase = confirm("Would you like lowercase characters to be in your password?");
   var includeUppercase = confirm("Would you like uppercase characters to be in your password?");
   var includeSpecial = confirm("Would you like special characters to be in your password?");
@@ -30,6 +31,7 @@ function generatePassword() {
 
   if (!includeLowercase && !includeUppercase && !includeSpecial && !includeNumbers) {
     alert("Please include at least one character type");
+    return null;
   }
 
   if (includeLowercase) {
@@ -54,21 +56,18 @@ function generatePassword() {
     fillMissing += possChars.charAt(Math.floor(Math.random() * possChars.length));
   }
 
-  finalPass = requiredChars + fillMissing;
+  finalPass += requiredChars + fillMissing;
+  return finalPass;
   console.log(finalPass);
-  
-
 }
 
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
-// // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
+  passwordText.value = password;
+}
 
-//   passwordText.value = password;
-
-// }
-
-// // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
