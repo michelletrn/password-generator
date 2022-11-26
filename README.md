@@ -12,7 +12,7 @@ N/A
 To use this password generator, simply click on the "Generate Password" and follow the prompt. To successfully create a password, you must provide a desired length within the range provided and allow for at least one type of character. Enjoy!
 
 Here is a screenshot of the application:
-[!passwordgenerator](./assets/_C__Users_michelle-pc_bootcamp_homework_password-generator_index.html(iPad%20Air).png)
+[!passwordgenerator](./assets/_C__Users_michelle-pc_bootcamp_homework_password-generator_index.html.png)
 
 ## Credits
 
