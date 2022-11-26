@@ -1,17 +1,24 @@
-# password-generator
+# Module 2 Challenge: Password Generator 
 
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
+## Description
+Given that the user is in need of a new/secure password, I created a password generator using Javascript. This password generator takes input, such as desired length and types of characters, from the user and produces a random output that is displayed into the page password textbox. The criteria of this project included prompting the user for length (range 8-128 characters), and allowing the user to include lowercase/uppercase, numbers, and special symbols in their password. For this code I took extra precaution to ensure that at least one character from each desired category was guaranteed to be in the final password and added alerts if user input was inappropriate. 
+
+## Installation
+
+N/A
+
+## Usage
+
+To use this password generator, simply click on the "Generate Password" and follow the prompt. To successfully create a password, you must provide a desired length within the range provided and allow for at least one type of character. Enjoy!
+
+Here is a screenshot of the application:
+[!passwordgenerator](./assets/_C__Users_michelle-pc_bootcamp_homework_password-generator_index.html(iPad%20Air).png)
+
+## Credits
+
+N/A
+
+## License
+
+N/A
+
